@@ -31,6 +31,7 @@ const Users = () => {
       <li>Name: { user.email }</li>
       <li>Name: { user.role }</li>
       <Link to={`/users/${user.id}`}>See Full User</Link>
+      <Link to={`/users/update/${user.id}`}>Update User</Link>
       <button onClick={()=> deletUser(user.id)}> Delete</button>
     </ul>
   ));
