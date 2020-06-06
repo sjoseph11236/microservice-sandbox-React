@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import Users from "./components/Users";
+import User from './components/User';
 
 function App() {
   return (
@@ -26,12 +27,9 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/users/:id"  component={User}/>
+          <Route path="/users" component={Users}/>
+          <Route exact path="/" component={Home}/>
         </Switch>
       </div>
     </Router>
